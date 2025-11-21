@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Calendar, User, MessageSquare, Heart, Share } from 'lucide-react';
+import { handleGenericAction } from '@/utils/toast';
 import Header from '@/components/Navigation/Header';
 
 interface NewsItem {
@@ -192,13 +193,28 @@ const News: React.FC = () => {
                   </div>
                   
                   <div className="flex items-center gap-2">
-                    <Button variant="ghost" size="sm" className="p-2">
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      className="p-2"
+                      onClick={() => handleGenericAction('Curtir notícia')}
+                    >
                       <Heart className="w-4 h-4" />
                     </Button>
-                    <Button variant="ghost" size="sm" className="p-2">
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      className="p-2"
+                      onClick={() => handleGenericAction('Compartilhar notícia')}
+                    >
                       <Share className="w-4 h-4" />
                     </Button>
-                    <Button variant="ghost" size="sm" className="p-2">
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      className="p-2"
+                      onClick={() => handleGenericAction('Comentar notícia')}
+                    >
                       <MessageSquare className="w-4 h-4" />
                     </Button>
                   </div>

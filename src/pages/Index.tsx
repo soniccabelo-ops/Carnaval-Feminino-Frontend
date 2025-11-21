@@ -62,13 +62,15 @@ const Index = () => {
           <p className="text-xl md:text-2xl mb-8 text-white/90">
             Mapeando, conectando e fortalecendo a resistência cultural feminista pelo Brasil
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="lg" className="animate-glow">
+          <div className="flex justify-center">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="animate-glow"
+              onClick={() => document.getElementById('map-section')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               <MapPin className="w-5 h-5 mr-2" />
               Explorar Mapa
-            </Button>
-            <Button variant="festive" size="lg">
-              Cadastrar Bloco
             </Button>
           </div>
         </div>

@@ -2,7 +2,8 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { MapPin, Users, Mail, Calendar } from 'lucide-react';
+import { MapPin, Users, Mail, Calendar, Home } from 'lucide-react';
+import { handleGenericAction } from '@/utils/toast';
 
 interface Block {
   id: string;
@@ -13,6 +14,7 @@ interface Block {
   local: [number, number];
   cidade: string;
   estado: string;
+  endereco: string;
   vertenteFeminista: string;
   formacao: string;
   cache?: string;
@@ -71,6 +73,11 @@ const BlockCard: React.FC<BlockCardProps> = ({
           </div>
         </div>
         
+        <div className="flex items-start gap-2 text-xs text-muted-foreground">
+          <Home className="w-3 h-3 mt-1 text-primary flex-shrink-0" />
+          <span className="line-clamp-2">{block.endereco}</span>
+        </div>
+        
         <div className="space-y-2">
           <Badge variant="outline" className="text-xs">
             {block.vertenteFeminista}
@@ -101,10 +108,15 @@ const BlockCard: React.FC<BlockCardProps> = ({
           </Button>
         </div>
         
-        <div className="flex items-center gap-2 pt-2 border-t border-border/50">
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => window.open(`mailto:${block.contato}`, '_blank')}
+          className="w-full flex items-center gap-2 pt-2 border-t border-border/50 rounded-none hover:bg-primary/5"
+        >
           <Mail className="w-4 h-4 text-muted-foreground" />
           <span className="text-xs text-muted-foreground truncate">{block.contato}</span>
-        </div>
+        </Button>
       </CardContent>
     </Card>
   );

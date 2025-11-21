@@ -48,11 +48,6 @@ const Header: React.FC = () => {
             })}
           </nav>
           
-          <div className="flex items-center gap-2">
-            <Button variant="festive" size="sm">
-              Cadastrar Bloco
-            </Button>
-          </div>
         </div>
         
         {/* Mobile Navigation */}

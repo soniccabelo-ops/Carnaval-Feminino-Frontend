@@ -7,6 +7,7 @@ export interface Block {
   local: [number, number];
   cidade: string;
   estado: string;
+  endereco: string;
   vertenteFeminista: string;
   formacao: string;
   cache?: string;
@@ -30,6 +31,7 @@ export const mockBlocks: Block[] = [
     local: [-23.5596, -46.6588],
     cidade: "São Paulo",
     estado: "SP",
+    endereco: "Rua Augusta, 1234 - Consolação, São Paulo - SP, 01305-100",
     vertenteFeminista: "Feminismo Interseccional",
     formacao: "20-30 integrantes",
     cache: "R$ 2.000 - R$ 5.000",
@@ -49,6 +51,7 @@ export const mockBlocks: Block[] = [
     local: [-23.5432, -46.6299],
     cidade: "São Paulo",
     estado: "SP",
+    endereco: "Av. Paulista, 2567 - Bela Vista, São Paulo - SP, 01311-300",
     vertenteFeminista: "Feminismo Negro",
     formacao: "15-25 integrantes",
     cache: "R$ 1.500 - R$ 3.000",
@@ -67,6 +70,7 @@ export const mockBlocks: Block[] = [
     local: [-23.5641, -46.6503],
     cidade: "São Paulo",
     estado: "SP",
+    endereco: "Rua da Consolação, 890 - República, São Paulo - SP, 01302-907",
     vertenteFeminista: "Feminismo Liberal",
     formacao: "10-20 integrantes",
     cache: "R$ 1.000 - R$ 2.500",
@@ -82,6 +86,7 @@ export const mockBlocks: Block[] = [
     local: [-22.9068, -43.1729],
     cidade: "Rio de Janeiro",
     estado: "RJ",
+    endereco: "Rua das Laranjeiras, 320 - Laranjeiras, Rio de Janeiro - RJ, 22240-006",
     vertenteFeminista: "Feminismo Radical",
     formacao: "30-50 integrantes",
     cache: "R$ 3.000 - R$ 8.000",
@@ -97,6 +102,7 @@ export const mockBlocks: Block[] = [
     local: [-19.9167, -43.9345],
     cidade: "Belo Horizonte",
     estado: "MG",
+    endereco: "Av. Afonso Pena, 1500 - Centro, Belo Horizonte - MG, 30130-005",
     vertenteFeminista: "Feminismo Cultural",
     formacao: "25-35 integrantes",
     cache: "R$ 2.500 - R$ 4.000",
@@ -112,6 +118,7 @@ export const mockBlocks: Block[] = [
     local: [-12.9777, -38.5016],
     cidade: "Salvador",
     estado: "BA",
+    endereco: "Rua Chile, 45 - Pelourinho, Salvador - BA, 40026-250",
     vertenteFeminista: "Feminismo Interseccional",
     formacao: "40-60 integrantes",
     cache: "R$ 4.000 - R$ 10.000",
@@ -127,6 +134,7 @@ export const mockBlocks: Block[] = [
     local: [-8.0476, -34.8770],
     cidade: "Recife",
     estado: "PE",
+    endereco: "Rua do Bom Jesus, 163 - Recife Antigo, Recife - PE, 50030-170",
     vertenteFeminista: "Feminismo Regional",
     formacao: "20-40 integrantes",
     cache: "R$ 2.000 - R$ 6.000",
@@ -142,6 +150,7 @@ export const mockBlocks: Block[] = [
     local: [-30.0346, -51.2177],
     cidade: "Porto Alegre",
     estado: "RS",
+    endereco: "Rua dos Andradas, 1001 - Centro Histórico, Porto Alegre - RS, 90020-007",
     vertenteFeminista: "Feminismo Socialista",
     formacao: "15-30 integrantes",
     cache: "R$ 1.500 - R$ 3.500",

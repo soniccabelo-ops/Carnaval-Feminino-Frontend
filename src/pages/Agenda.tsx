@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Calendar, MapPin, Clock, Users, Filter } from 'lucide-react';
+import { handleGenericAction } from '@/utils/toast';
 import Header from '@/components/Navigation/Header';
 import { mockBlocks } from '@/data/blocks';
 
@@ -227,7 +228,11 @@ const Agenda: React.FC = () => {
                     )}
                   </div>
                   
-                  <Button variant="carnival" size="sm">
+                  <Button 
+                    variant="carnival" 
+                    size="sm"
+                    onClick={() => handleGenericAction('Participar do evento')}
+                  >
                     Participar
                   </Button>
                 </div>
